@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+
+<br>
+
+
+<head>
+    <title>HAYLEYS WORLD</title>
+    <link rel="stylesheet" href="hayleys-world.css">
+</head>
+<body>
+    <div class="container">
+        <img id="poms1" src="images/Sequence 01.gif" alt="poms" style="max-width: 100%;">
+         <div class="centered" onmouseover="manipulate()"><h1 id="demoText">Do you remember the first time you died?</h1></div>
+       <button class="bottom-center button" onclick="swapPhoto()" >HAYLEY'S WORLD</button>
+    </div>
+
+    <a href="do-you-remember.html"></a>
+
+ 
+
+    <button id="enterBtn" class="bottom-right button" onclick="location.href='do-you-remember.html'" style="display:none">ENTER</button>
+
+
+     
+
+<script>
+ 
+function swapPhoto(){
+    document.getElementById("poms1").src="images/moon-face.gif";
+
+}
+            
+ function originalPhoto(){
+    document.getElementById("poms1").src="images/Sequence 01.gif";           
+ }
+
+ function manipulate(){
+            document.getElementById("demoText").innerHTML = "You will pass your destination before you find it.";
+        }
+
+    function originalText(){
+                document.getElementById("demoText").innerHTML = "Do you remember the first time you died?";
+            }
+
+    function returnToOriginal(){
+        originalPhoto();
+        originalText();
+    }
+
+    function buttonAppear(){
+        document.querySelector('.bottom-center').style.display = 'block';
+    }
+
+    function returnToOriginal(){
+        swapPhoto();
+        buttonAppear();
+    }
+
+       document.querySelector('.bottom-center.button').addEventListener('click', function(){
+        document.getElementById('enterBtn').style.display = 'block';
+    });
+</script>
+
+
+</body>
